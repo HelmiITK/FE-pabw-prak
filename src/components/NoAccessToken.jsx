@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import { getMe } from "../redux/actions/authActions";
 
 const NoAccessToken = ({ children }) => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+   const navigate = useNavigate();
+   const dispatch = useDispatch();
 
-  useEffect(() => {
-    //Example if we want access login page but we've already logged in, -> Home
-    dispatch(getMe(navigate, "/", null));
-  }, [dispatch, navigate]);
-  return children;
+   useEffect(() => {
+      //Example if we want access login page but we've already logged in, -> Home
+      dispatch(getMe(navigate, "/", null));
+   }, [dispatch, navigate]);
+   return children;
 };
 
 export default NoAccessToken;

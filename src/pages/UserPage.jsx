@@ -25,7 +25,6 @@ const UserPage = () => {
         ? user?.email
         : user?.email.replace(/.{4}(?=@)/g, '****');
 
-
     return (
         <>
             <div className="w-full h-screen flex flex-col justify-center items-center bg-slate-800">
@@ -46,7 +45,6 @@ const UserPage = () => {
                         </div>
                         <div className="flex items-center gap-3">
                             <MdMarkEmailRead className="text-red-600 w-6 h-10" />
-                            {/* <p><i>{user?.email}</i></p> */}
 
                             <p>
                                 {showFullEmail ? (

@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { BiLogInCircle } from "react-icons/bi";
-import GoogleLogin from "../components/GoogleLogin";
 import { login } from "../redux/actions/authActions";
 import Slider from "react-slick";
 
@@ -52,9 +51,8 @@ const LoginPage = () => {
       <div className="bg-slate-950 w-full h-[900px] lg:h-screen">
         <div
           className={`absolute px-4 lg:pt-20 w-full lg:w-full lg:px-[760px]
-                            ${
-                              isLoading ? "opacity-50 pointer-events-none" : ""
-                            }`}
+                            ${isLoading ? "opacity-50 pointer-events-none" : ""
+            }`}
         >
           {isLoading && (
             <div
@@ -63,7 +61,7 @@ const LoginPage = () => {
                                                     lg:absolute lg:top-[299px] lg:left-[984px]"
             ></div>
           )}
-          
+
           {/* card movie */}
           <div className="w-80 h-[900px] lg:w-[700px] lg:h-screen rounded-e-[60px] bg-gradient-to-r from-cyan-800 bg-opacity-50 absolute left-0 top-0">
             <div className="flex flex-col lg:mt-48 lg:w-96 lg:h-72 lg:p-12 lg:rounded-2xl lg:ml-40 lg:bg-slate-900 lg:bg-opacity-50 lg:flex lg:flex-col lg:shadow-2xl">
@@ -177,11 +175,9 @@ const LoginPage = () => {
                       Register
                     </Link>
                   </p>
-                  <p className="text-white my-2 font-normal text-lg">Or</p>
                 </div>
               </form>
               <div className="mt-2 flex justify-center">
-                <GoogleLogin buttonText={"Login With Google"} />
               </div>
             </div>
           </div>

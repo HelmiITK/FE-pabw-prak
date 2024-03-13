@@ -4,14 +4,14 @@ import { useDispatch } from "react-redux";
 import { getMe } from "../redux/actions/authActions";
 
 const Protected = ({ children }) => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+   const navigate = useNavigate();
+   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getMe(navigate, null, "/login"));
-  }, [dispatch, navigate]);
+   useEffect(() => {
+      dispatch(getMe(navigate, null, "/login"));
+   }, [dispatch, navigate]);
 
-  return children;
+   return children;
 };
 
 export default Protected;

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import GoogleLogin from "../components/GoogleLogin";
 import { BiSolidUserDetail } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -282,11 +281,9 @@ const RegisterPage = () => {
                     Login
                   </Link>
                 </p>
-                <p className="my-1 font-medium text-lg text-white">Or</p>
               </div>
             </form>
             <div className="mt-2 flex justify-center">
-              <GoogleLogin buttonText={"Regis With Google"} />
             </div>
           </div>
         </div>
